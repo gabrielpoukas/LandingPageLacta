@@ -1,0 +1,105 @@
+* {
+
+marginb: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+
+
+font-family: 'Poppins' , sans-serif;
+line-height: 1.7;
+background-color:  #f7f7f7;
+color: #333;
+}
+
+.produto, .sessao_bombons, .final_cta, .footer {
+
+
+    padding: 22px;
+    text-align: center;
+
+}
+
+.produto{
+
+
+background-color: #B3001B;
+color: white;
+padding-top: 42px;
+}
+
+.produto h1  {
+
+
+font-size: 2.3em;
+margin-bottom: 12px;
+text-shadow: 3px 4px 6px rgb((0,0,0,0.4));
+
+}
+
+.descproduto{
+
+font-size: 1.2em;
+font-weight: 400;
+margin-bottom: 21px;
+
+}
+
+.imagem_placeholder{
+
+width: 90%;
+height: 250px;
+background-color: #d2b48c;
+margin: 20px auto 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+font-weight: bold;
+
+}
+
+.preco_caixa {
+
+
+margin-bottom: 24px;
+
+}
+
+.preco_original{
+
+
+display: block;
+text-decoration: line-through;
+font-size: 1.2em;
+color: #FFD700;
+
+}
+
+.cta_botao{
+
+display: block;
+width: 90%;
+margin: 14px auto;
+padding: 16px 21px;
+background-color: #FFD700;
+color: #B3001B;
+text-decoration: none;
+font-weight: 700;
+font-size: 1.3em;
+border-radius: 33px;
+transition: background-color 0.3s ease;
+box-shadow: 0 4px 7px rgba (0,0,0, 0.3);
+
+}
+
+.cta_botao:hover{
+
+background-color:  #FFC000;
+
+}
+
+.
