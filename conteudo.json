@@ -1,63 +1,46 @@
 {
+    "produto": {
+        "nome": "Caixa Favoritos Lacta",
+        "peso": "250,6g",
+        "preco_oferta": "R$ 15,99",
+        "preco_original": "R$ 22,99"
+    },
 
-        "produto":  {
-
-            "nome": " Caixa Favoritos Lacta",
-            "peso": "250,6g",
-            "preco_oferta": "R$ 15,99",
-            "preco_original": "R$ 22,99"
-
-            },
-
-            "bombons":   [
-                {
-
-                 "id": 1,
-                 "nome":"Sonho de Valsa",
-                 "sabor" : "Wafer crocante com recheio cremoso de amendoim e cobertura de chocolate ao leite.",
-                 "icone_cor": "#FFC0CB"
-
-                },
-
-                {
-
-                    "id": 2,
-                    "nome": "Ouro Branco",
-                    "sabor": "Wafer crocante com recheio cremoso e cobertura de chocolate branco.",
-                    "icone_cor": "#FFFACD"
-                },
-
-                {
-
-                    "id":3,
-                    "nome": "Diamante Negro",
-                    "sabor": "Chocolate ao leite com crocantes de açucar caramelizado e castanha de caju",
-                    "icone_cor": "#36454F"
-                },
-
-                {
-
-                    "id": 4,
-                    "nome":"Laka",
-                    "sabor": "O irresistivel chocolate branco Lacta, cremoso e Suave.",
-                    "icone_cor":"#F5F5F5"
-                },
-
-                {
-                    
-                    "id": 5,
-                    "nome": "Bis",
-                    "sabor": "O wafer crocante e recheado, coberto com o delicioso chocolate Lacta",
-                    "icone_cor": "#8B4513"
-
-
-                }
-
-               
-
-
-            ]
-
-
-
+    "bombons": [
+        {
+            "id": 1,
+            "nome": "Sonho de Valsa",
+            "sabor": "Wafer crocante com recheio cremoso de amendoim e cobertura de chocolate ao leite.",
+            "icone_cor": "#FFC0CB",
+            "imagem_url": "imgprojeto/sonho.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "Ouro Branco",
+            "sabor": "Wafer crocante com recheio cremoso e cobertura de chocolate branco.",
+            "icone_cor": "#FFFACD",
+            "imagem_url": "imgprojeto/ourobranco.png"
+        },
+        {
+            "id": 3,
+            "nome": "Diamante Negro",
+            "sabor": "Chocolate ao leite com crocantes de açucar caramelizado e castanha de caju.",
+            "icone_cor": "#36454F",
+            "imagem_url": "imgprojeto/diamante.jpg"
+        },
+        {
+            "id": 4,
+            "nome": "Laka",
+            "sabor": "O irresistivel chocolate branco Lacta, cremoso e Suave.",
+            "icone_cor": "#F5F5F5",
+            "imagem_url": "imgprojeto/laka.png"
+        },
+        {
+            "id": 5,
+            "nome": "Bis",
+            "sabor": "O wafer crocante e recheado, coberto com o delicioso chocolate Lacta",
+            "icone_cor": "#8B4513",
+            "imagem_url": "imgprojeto/bis.png"
+        }
+    ]
 }

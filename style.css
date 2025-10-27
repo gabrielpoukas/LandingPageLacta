@@ -1,105 +1,336 @@
+/* 1. Reset e Fontes */
 * {
-
-marginb: 0;
-padding: 0;
-box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-
-
-font-family: 'Poppins' , sans-serif;
-line-height: 1.7;
-background-color:  #f7f7f7;
-color: #333;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+    overflow-x: hidden;
 }
 
-.produto, .sessao_bombons, .final_cta, .footer {
+/* 2. Cores da Marca (Paleta Lacta - Favoritos) */
+:root {
+    --color-primary: #004D9D;     /* Azul Escuro da Caixa (Fundo Hero) */
+    --color-secondary: #B3001B;   /* Vermelho Destaque */
+    --color-cta: #FFD700;         /* Amarelo/Dourado para CTA e Preço */
+    --color-chocolate: #4C2F19;   /* Marrom-Chocolate para CTA Final e Footer */
+    --color-text-light: #ffffff;
+    --color-text-dark: #333333;
+}
 
-
-    padding: 22px;
+/* 3. Estilização Geral (Mobile First) */
+.hero, .bombons-section, .final-cta, .footer {
+    padding: 20px;
     text-align: center;
-
 }
 
-.produto{
-
-
-background-color: #B3001B;
-color: white;
-padding-top: 42px;
+/* 4. Estilização do Hero (Primeira Dobra) */
+.hero {
+    background-color: var(--color-primary); 
+    color: var(--color-text-light);
+    padding-top: 40px;
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
 }
 
-.produto h1  {
-
-
-font-size: 2.3em;
-margin-bottom: 12px;
-text-shadow: 3px 4px 6px rgb((0,0,0,0.4));
-
+/* Container para limitar o conteúdo horizontal no hero */
+.hero-inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 }
 
-.descproduto{
-
-font-size: 1.2em;
-font-weight: 400;
-margin-bottom: 21px;
-
+/* Estilo do Topo (IDEAL PARA PRESENTE...) */
+.pre-headline {
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-bottom: -5px;
+    color: var(--color-cta);
+    opacity: 0.9;
 }
 
-.imagem_placeholder{
-
-width: 90%;
-height: 250px;
-background-color: #d2b48c;
-margin: 20px auto 30px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 10px;
-font-weight: bold;
-
+.hero-subtitle {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.preco_caixa {
-
-
-margin-bottom: 24px;
-
+.hero h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.preco_original{
-
-
-display: block;
-text-decoration: line-through;
-font-size: 1.2em;
-color: #FFD700;
-
+.tagline {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
-.cta_botao{
-
-display: block;
-width: 90%;
-margin: 14px auto;
-padding: 16px 21px;
-background-color: #FFD700;
-color: #B3001B;
-text-decoration: none;
-font-weight: 700;
-font-size: 1.3em;
-border-radius: 33px;
-transition: background-color 0.3s ease;
-box-shadow: 0 4px 7px rgba (0,0,0, 0.3);
-
+/* Container da Imagem (Mobile) */
+.hero-image-placeholder {
+    width: 95%;
+    max-width: 400px;
+    margin: 20px auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.cta_botao:hover{
-
-background-color:  #FFC000;
-
+/* REGRA ESSENCIAL PARA RESPONSIVIDADE DA IMAGEM PRINCIPAL */
+.hero-image-placeholder img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.5s ease;
 }
 
-.
+/* Interatividade: Imagem principal com leve efeito 3D ao passar o mouse */
+.hero-image-placeholder img:hover {
+    transform: scale(1.03) rotateZ(1deg);
+}
+
+/* Tag de Sabor (Aparece no Mobile) */
+.image-tag {
+    position: absolute;
+    bottom: 0px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-secondary); 
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Preço */
+.price-box {
+    margin-bottom: 25px;
+}
+
+.price-original {
+    display: block;
+    text-decoration: line-through;
+    font-size: 1.1em;
+    color: var(--color-cta); 
+    opacity: 0.8;
+}
+
+.price-oferta {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--color-cta); 
+}
+
+/* CTA Button - Interativo */
+.cta-button {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    padding: 15px 20px;
+    background-color: var(--color-cta); 
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #FFC000;
+    transform: scale(1.05);
+}
+
+.secondary-cta {
+    background-color: var(--color-primary); 
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+}
+
+.secondary-cta:hover {
+    background-color: #003a80;
+}
+
+/* 5. Lista de Bombons (Cards) */
+.bombons-section {
+    background-color: var(--color-text-light);
+}
+
+.bombons-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: var(--color-primary); 
+}
+
+.bombons-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilo do Card Individual */
+.bombom-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 200px; 
+    border-left: 5px solid; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Interatividade: Levanta e brilha um pouco no hover */
+.bombom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Wrapper para a imagem dentro do card */
+.bombom-card .card-image-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    max-height: 100px;
+    overflow: hidden; 
+}
+
+/* Tamanho dos Bombons */
+.bombom-card .bombom-img {
+    width: 100%; 
+    max-width: 80px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* Interatividade: A imagem do bombom aumenta um pouco no hover do card */
+.bombom-card:hover .bombom-img {
+    transform: scale(1.1);
+}
+
+/* Centralização do Conteúdo do Card */
+.bombom-card h4 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: var(--color-text-dark);
+}
+
+.bombom-card p {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+/* 6. Seção Final CTA */
+.final-cta {
+    background-color: var(--color-chocolate); 
+    color: white;
+    padding: 40px 20px;
+}
+
+.final-cta h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.small-text {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+/* 7. Footer (Créditos) */
+.footer {
+    background-color: #333;
+    color: #bbb;
+    font-size: 0.8em;
+    padding: 15px;
+}
+
+.footer a {
+    color: var(--color-cta);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* 8. Media Query para Desktop (Telas Maiores) */
+@media (min-width: 768px) {
+    
+    .hero {
+        min-height: 80vh; 
+    }
+
+    /* OCULTA A TAG FLUTUANTE NO DESKTOP */
+    .image-tag {
+        display: none;
+    }
+
+    /* Layout Flexbox Horizontal no Hero */
+    .hero-inner-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        text-align: left;
+        max-width: 45%; 
+        padding-top: 0;
+        z-index: 10; 
+    }
+    
+    .hero-image-placeholder {
+        position: static; 
+        margin: 0;
+        width: 50%;
+    }
+
+    .hero-image-placeholder img {
+        width: 100%; 
+        max-width: 450px; 
+    }
+
+    /* Layout de Colunas nos Bombons */
+    .bombons-grid {
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: space-around; 
+    }
+
+    .bombom-card {
+        width: 30%; 
+    }
+    
+    .cta-button {
+        width: 350px; 
+        margin: 15px 0; 
+    }
+
+    /* Centraliza o botão do CTA final novamente no desktop */
+    .final-cta .cta-button {
+        margin: 15px auto; 
+    }
+}
